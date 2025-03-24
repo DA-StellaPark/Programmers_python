@@ -3,4 +3,6 @@ def solution(slice, n):
         answer = n//slice
     else:
         answer = n//slice+1
+        
+    # return ((n - 1) // slice) + 1
     return answer
