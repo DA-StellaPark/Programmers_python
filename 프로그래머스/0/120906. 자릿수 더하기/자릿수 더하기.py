@@ -1,6 +1,3 @@
 def solution(n):
-    answer = 0
-    while n:
-        n, r = divmod(n, 10)
-        answer += r
+    answer = sum(map(int, (str(n))))
     return answer
