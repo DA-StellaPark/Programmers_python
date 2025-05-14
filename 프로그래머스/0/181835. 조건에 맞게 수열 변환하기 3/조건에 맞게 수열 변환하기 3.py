@@ -4,3 +4,4 @@ def solution(arr, k):
     else:
         answer = [x + k for x in arr]
     return answer
+    # [i*k if k%2!=0 else i+k for i in arr]
