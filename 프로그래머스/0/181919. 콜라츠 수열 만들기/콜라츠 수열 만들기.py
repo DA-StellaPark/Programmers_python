@@ -1,3 +1,5 @@
+# 짝수면 n = n / 2 
+# 홀수면 n = 3 * n + 1
 def solution(n):
     answer = []
     while n != 1:
