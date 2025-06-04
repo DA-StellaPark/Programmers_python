@@ -8,3 +8,4 @@ def solution(num_list):
                 i = int((i-1)/2)
             count += 1
     return count
+# return sum(len(bin(i)) - 3 for i in num_list)
