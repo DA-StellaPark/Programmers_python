@@ -7,3 +7,4 @@ def solution(numbers):
             ans.append(i)
     answer = sum(ans)
     return answer
+# return 45-sum(numbers)
