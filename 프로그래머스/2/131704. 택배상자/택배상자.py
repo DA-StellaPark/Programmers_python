@@ -12,6 +12,5 @@ def solution(order):
             if len(stacks) == 0:
                 break
         i += 1
-
-
+        
     return idx
