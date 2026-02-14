@@ -1,26 +1,9 @@
-def solution(abba):
-    answer = 0
+import re
 
-    f=0
-    t = []
-    for i in abba:
-
-        a = i
-        b=a.replace("aya","1")
-        c=b.replace("ye","1")
-        d=c.replace("woo","1")
-        e=d.replace("ma","1")
-        t.append(e)
-    a=0
-    b=len(t)
-    e=0
-##    z = "1112323"
-    for z in t:
-        d = 0
-        for i in z:
-            if i == "1":
-                d=d+1
-        if d==len(z):
-            e=e+1
-    answer=e
-    return answer
+def solution(babbling):
+    regex = re.compile('^(aya|ye|woo|ma)+$')
+    cnt=0
+    for e in babbling:
+        if regex.match(e):
+            cnt+=1
+    return cnt
