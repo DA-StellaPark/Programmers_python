@@ -1,26 +1,10 @@
 def solution(n):
-    global answer
-    answer = [[0 for _ in range(n)]for _ in range(n)]
-    assign(0,0,1,n);
+    answer = [[None for j in range(n)] for i in range(n)]
+    move = [[0, 1], [1, 0], [0, -1], [-1, 0]]
+    x, y, m = 0, 0, 0
+    for i in range(1, n**2 + 1):
+        answer[y][x] = i
+        if y + move[m][0] >= n or x + move[m][1] >= n or answer[y + move[m][0]][x + move[m][1]]:
+            m = (m + 1) % len(move)
+        y, x = y + move[m][0], x + move[m][1]
     return answer
-
-def assign(y, x, num, n):
-    if(n<=0):return answer
-    answer[y][x] = num
-    for _ in range(1, n):#→
-        x+=1
-        num+=1
-        answer[y][x]=num
-    for _ in range(1, n):#↓
-        y+=1
-        num+=1
-        answer[y][x]=num
-    for _ in range(1, n):#←
-        x-=1
-        num+=1
-        answer[y][x]=num
-    for _ in range(1, n-1):#↑
-        y-=1
-        num+=1
-        answer[y][x]=num
-    return assign(y, x+1, num+1,n-2)
