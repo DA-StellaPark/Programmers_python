@@ -1,27 +1,8 @@
 def solution(progresses, speeds):
-    answer = []
-    days = []
-
-    # 기간 구하기
-    for i in range(len(progresses)):
-        days.append((100 - progresses[i] + speeds[i]-1) // speeds[i])
-    print(days)
-
-    # 기능 배포 개수
-    current = days[0]
-    count = 1
-    for i in range(1, len(days)):
-        if days[i] <= current:
-            count += 1
+    Q = []
+    for p, s in zip(progresses, speeds):
+        if len(Q) == 0 or Q[-1][0] < -((p-100)//s) :
+            Q.append([-((p-100)//s),1])
         else:
-            answer.append(count)
-            count = 1
-            current = days[i]
-
-    # 마무리 기능 배포
-    answer.append(count)
-
-
-
-
-    return answer
+            Q[-1][1] += 1
+    return [q[1] for q in Q]
