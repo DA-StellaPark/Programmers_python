@@ -9,7 +9,6 @@ def solution(n, s):
 
     answer = [a] * n
 
-    # b를 죄다 1씩 나눠줘도 한바퀴가 끝나면 무조건 0이 됨
     i = 0
     while b > 0:
         answer[i] += 1
