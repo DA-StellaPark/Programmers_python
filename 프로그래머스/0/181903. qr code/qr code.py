@@ -1,6 +1,6 @@
 def solution(q, r, code):
     answer = ''
-    for idx, val in enumerate(code):
-        if idx % q == r:
-            answer += val
+    for i in range(len(code)):
+        if i % q == r:
+            answer += code[i]
     return answer
