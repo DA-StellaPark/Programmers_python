@@ -12,3 +12,5 @@ def solution(sides):
         answer += 1
         
     return answer
+
+# return sum(sides) - max(sides) + min(sides) - 1
