@@ -1,5 +1,4 @@
 def solution(n, lost, reserve):
-    # 정렬
     lost.sort()
     reserve.sort()
 	
