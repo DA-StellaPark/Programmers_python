@@ -1,10 +1,11 @@
-from collections import deque
+
+2
+3
+4
+5
+6
 def solution(n):
-    if n==1 : return 1
-    elif n==2 : return 2  
-    dp = deque([1,2])
-
-    for _ in range(3, n+1):
-        dp.append(dp.popleft() + dp[0])
-
-    return dp[-1] % 1000000007
+    a, b = 1, 1
+    for i in range(1, n):
+        a, b = b, (a + b) % 1000000007
+    return b
