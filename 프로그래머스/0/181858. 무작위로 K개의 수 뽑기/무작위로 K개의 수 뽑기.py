@@ -1,9 +1,9 @@
 def solution(arr, k):
-    ret = []
+    result = []
     for i in arr:
-        if i not in ret:
-            ret.append(i)
-        if len(ret) == k:
+        if i not in result:
+            result.append(i)
+        if len(result) == k:
             break
 
-    return ret + [-1] * (k - len(ret))
+    return result + [-1] * (k - len(result))
