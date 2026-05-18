@@ -8,3 +8,5 @@ def solution(price, money, count):
 # 2
 # def solution(price, money, count):
 #     return max(0, price * (count+1) * count // 2 - money) 
+
+# 부족한 금액이 0원일 경우 대비해서 max 이용
