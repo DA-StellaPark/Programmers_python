@@ -6,4 +6,4 @@ def solution(arr, k):
         if len(result) == k:
             break
 
-    return result + [-1] * (k - len(result))
+    return result + [-1] * (k - len(result)) # 나머지 값 전부 -1로 채우기
